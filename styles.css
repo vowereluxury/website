@@ -224,6 +224,7 @@ nav ul li a:hover {
 .board-content {
   text-align: center;
   margin: 40px auto;
+  font-family: 'Playfair Display', serif;
 }
 
 .board-content h1 {
@@ -231,14 +232,6 @@ nav ul li a:hover {
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
 }
-
-/* Fashion line colors for h1 */
-.ardor-hero h1 { color: #B22222; }
-.regal-hero h1 { color: #8B4513; }
-.pearl-hero h1 { color: #800080; }
-.empress-hero h1 { color: #FFD700; }
-.baberry-hero h1 { color: #FF69B4; }
-.allure-hero h1 { color: #800000; }
 
 .board-content p {
   font-family: 'Playfair Display', serif;
@@ -249,6 +242,14 @@ nav ul li a:hover {
   line-height: 1.6;
   color: #333;
 }
+
+/* Fashion line colors for h1 */
+.ardor-hero h1 { color: #B22222; }
+.regal-hero h1 { color: #8B4513; }
+.pearl-hero h1 { color: #800080; }
+.empress-hero h1 { color: #FFD700; }
+.baberry-hero h1 { color: #FF69B4; }
+.allure-hero h1 { color: #800000; }
 
 
 /* Footer */
