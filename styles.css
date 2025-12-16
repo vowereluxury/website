@@ -252,68 +252,40 @@ nav ul li a:hover {
 
 }
 
-
 /* Footer */
-footer {
-  background-color: white;
-  color: black;
+.footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  background-color: #fff;
   border-top: 1px solid #ddd;
-  font-weight: 400;
+  text-align: center;
 }
 
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.footer-left a {
-  font-size: 16px;
-  color: black;
-  transition: color 0.3s ease;
-  font-weight: 400;
-}
-
-.footer-left a:hover {
-  color: gray;
-}
-
-/* WhatsApp CTA in footer */
-.footer-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  color: black;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-whatsapp:hover {
-  color: gray;
-}
-
-.footer-right p {
-  margin: 3px 0;
-  font-size: 16px;
-  font-weight: 400;
+.footer-left,
+.footer-right {
+  flex: 1 1 100%;
+  margin: 0.5rem 0;
 }
 
 .footer-right a {
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
 .footer-right a:hover {
-  text-decoration: underline;
+  color: #8B4513; 
+}
+
+/* Credit line */
+.credit {
+  font-size: 0.7rem;
+  color: #999;
+  margin-top: 0.3rem;
 }
 
 /* Scroll-up arrow (hidden until scroll) */
