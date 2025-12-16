@@ -278,7 +278,7 @@ nav ul li a:hover {
 }
 
 .footer-right a:hover {
-  color: #8B4513; 
+  transform: scale(1.2); 
 }
 
 /* Credit line */
