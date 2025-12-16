@@ -270,7 +270,7 @@ nav ul li a:hover {
   text-align: center;
   font-size: 0.95rem;
   color: #333;
-  margin: 1rem;          
+  margin: 0.5rem;          
   padding: 0;        
 }
 
@@ -285,7 +285,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 1rem;                  /* space between icons */
-  /* margin-bottom: rem;        /* extra space from bottom of screen */ */
+  margin-bottom: 1.5rem;        /* extra space from bottom of screen */
 }
 
 .social-icons a {
