@@ -255,14 +255,14 @@ nav ul li a:hover {
 /* Footer */
 .footer {
   display: flex;
-  flex-direction: column;      /* stack elements vertically */
+  flex-direction: column;      
   justify-content: center;
-  align-items: center;         /* center text and icons */
+  align-items: center;         
   text-align: center;
-  padding: 2rem 1.5rem 3rem 1.5rem; /* extra bottom padding for space below icons */
+  padding: 2rem 1.5rem;       /* top/bottom padding, bottom space handled separately */
   background-color: #fff;
   border-top: 1px solid #ddd;
-  gap: 2rem;                  /* consistent space between copyright, credit, icons */
+  gap: 2rem;                  /* space between copyright, credit, social icons */
 }
 
 /* Copyright and Credit text */
@@ -284,8 +284,8 @@ nav ul li a:hover {
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;              /* space between icons */
-  /* remove margin-top and margin-bottom, flex gap handles spacing */
+  gap: 1rem;                  /* space between icons */
+  margin-bottom: 3rem;        /* extra space from bottom of screen */
 }
 
 .social-icons a {
