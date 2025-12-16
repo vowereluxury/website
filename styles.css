@@ -255,15 +255,14 @@ nav ul li a:hover {
 /* Footer */
 .footer {
   display: flex;
+  flex-direction: column;      /* stack elements vertically */
   justify-content: center;
-  align-items: center;
-  flex-direction: column; /* stack text and icons */
-  flex-wrap: wrap;
-  padding: 1.5rem 2rem;
+  align-items: center;         /* center text and icons */
+  text-align: center;
+  padding: 2rem 1.5rem;       /* vertical space top & bottom */
   background-color: #fff;
   border-top: 1px solid #ddd;
-  text-align: center;
-  gap: 0.5rem; /* spacing between text and icons */
+  gap: 0.5rem;                 /* space between copyright, credit, icons */
 }
 
 /* Copyright text */
@@ -274,31 +273,31 @@ nav ul li a:hover {
   margin: 0;
 }
 
-/* Credit line under copyright */
+/* Credit line */
 .footer .credit {
   font-size: 0.75rem;
-  font-style: italic;
   color: #999;
   margin: 0.2rem 0 0 0;
 }
 
-/* Social icons row */
+/* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem; /* spacing between icons */
-  margin-top: 0.5rem;
+  gap: 1rem;                  /* space between icons */
+  margin-top: 1rem;            /* extra space from text */
+  margin-bottom: 1.5rem;       /* space from bottom of screen */
 }
 
 .social-icons a {
-  font-size: 1.2rem; /* keep original size */
-  color: #333;        /* keep original color */
-  transition: transform 0.3s ease, color 0.3s ease; /* keep smooth hover effects */
+  font-size: 1.2rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2); /* keep hover scale effect */
-  color: #000;           /* optional: slightly darker on hover */
+  transform: scale(1.2);
+  color: #000;
 }
 
 
