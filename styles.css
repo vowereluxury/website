@@ -317,7 +317,6 @@ footer {
 }
 
 /* Scroll-up arrow (hidden until scroll) */
-/* Scroll-up arrow (hidden until scroll) */
 .scroll-up {
   position: fixed;
   bottom: 1rem;
@@ -343,7 +342,7 @@ footer {
 
 /* Default hover fallback */
 .scroll-up:hover {
-  background-color: #ccc;
+  background-color: #333;
   transform: translateY(-4px);
 }
 
