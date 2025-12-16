@@ -29,7 +29,9 @@
   </script>
 
 </head>
-<body>
+  
+<body id="top">
+  
   <!-- Navigation -->
   <header>
     <div class="logo">
@@ -117,6 +119,11 @@
     </div>
   </section>
 
+  <!-- Scroll-up arrow (bottom right) -->
+  <a href="#top" class="scroll-up" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <!-- Footer -->
   <footer>
     <!-- Social + WhatsApp left -->
@@ -138,5 +145,19 @@
       <p>©2025 Vowéré. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Scroll up arrow javascript -->
+  <script>
+    document.addEventListener('scroll', () => {
+      const scrollUp = document.querySelector('.scroll-up');
+      if (!scrollUp) return;
+      if (window.scrollY > 200) {
+        scrollUp.classList.add('show');
+      } else {
+        scrollUp.classList.remove('show');
+      }
+    });
+  </script>
+  
 </body>
 </html>
