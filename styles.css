@@ -265,20 +265,15 @@ nav ul li a:hover {
   gap: 0.5rem;                 /* space between copyright, credit, icons */
 }
 
-/* Copyright text */
-.footer .copyright {
-  font-weight: 500;
+/* Copyright and Credit text */
+.footer p {
+  text-align: center;
   font-size: 0.95rem;
   color: #333;
-  margin: 0;
+  margin: 0;          /* remove default top/bottom margin */
+  padding: 0;         /* remove any padding */
 }
 
-/* Credit line */
-.footer .credit {
-  font-size: 0.75rem;
-  color: #999;
-  margin: 0.2rem 0 0 0;
-}
 
 /* Social icons */
 .social-icons {
