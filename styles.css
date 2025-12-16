@@ -252,69 +252,6 @@ nav ul li a:hover {
 
 }
 
-/* Scroll-up arrow (hidden until scroll) */
-.scroll-up {
-  position: fixed;
-  right: 1.5rem;
-  left: auto;
-  bottom: 1rem;
-  background-color: #000;
-  color: #fff;
-  padding: 0.6rem;
-  border-radius: 50%;
-  width: 54px;
-  height: 54px;
-  font-size: 1.3rem;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.scroll-up.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Default hover fallback */
-.scroll-up:hover {
-  background-color: #ccc;
-  transform: translateY(-4px);
-}
-
-/* Collection-specific hover colors */
-body.regal .scroll-up:hover {
-  background-color: #8B4513; /* Regal */
-  color: #fff;
-}
-
-body.ardor .scroll-up:hover {
-  background-color: #B22222; /* Ardor */
-  color: #fff;
-}
-
-body.pearl .scroll-up:hover {
-  background-color: #800080; /* Pearl */
-  color: #fff;
-}
-
-body.empress .scroll-up:hover {
-  background-color: #FFD700; /* Empress */
-  color: #000;
-}
-
-body.baberry .scroll-up:hover {
-  background-color: #FF69B4; /* Baberry */
-  color: #000;
-}
-
-body.allure .scroll-up:hover {
-  background-color: #800000; /* Allure */
-  color: #fff;
-}
-
 
 /* Footer */
 footer {
@@ -378,6 +315,70 @@ footer {
 .footer-right a:hover {
   text-decoration: underline;
 }
+
+/* Scroll-up arrow (hidden until scroll) */
+.scroll-up {
+  position: fixed;
+  right: 1.5rem;
+  left: auto;
+  bottom: 1rem;
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 1.3rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-up.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Default hover fallback */
+.scroll-up:hover {
+  background-color: #ccc;
+  transform: translateY(-4px);
+}
+
+/* Collection-specific hover colors */
+body.regal .scroll-up:hover {
+  background-color: #8B4513; /* Regal */
+  color: #fff;
+}
+
+body.ardor .scroll-up:hover {
+  background-color: #B22222; /* Ardor */
+  color: #fff;
+}
+
+body.pearl .scroll-up:hover {
+  background-color: #800080; /* Pearl */
+  color: #fff;
+}
+
+body.empress .scroll-up:hover {
+  background-color: #FFD700; /* Empress */
+  color: #000;
+}
+
+body.baberry .scroll-up:hover {
+  background-color: #FF69B4; /* Baberry */
+  color: #000;
+}
+
+body.allure .scroll-up:hover {
+  background-color: #800000; /* Allure */
+  color: #fff;
+}
+
 
 /* ============================= */
 /* RESPONSIVE STYLES */
