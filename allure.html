@@ -31,7 +31,9 @@
   <script src="carousel.js" defer></script>
   
 </head>
-<body>
+  
+<body id="top">
+  
   <!-- Header -->
   <header>
     <div class="logo">
@@ -166,6 +168,11 @@
 
   </section>
 
+  <!-- Scroll-up arrow (bottom right) -->
+  <a href="#top" class="scroll-up" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
   <!-- Footer -->
   <footer>
     <div class="footer-left">
@@ -184,5 +191,19 @@
       <p>©2025 Vowéré. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Scroll up arrow javascript -->
+  <script>
+    document.addEventListener('scroll', () => {
+      const scrollUp = document.querySelector('.scroll-up');
+      if (!scrollUp) return;
+      if (window.scrollY > 200) {
+        scrollUp.classList.add('show');
+      } else {
+        scrollUp.classList.remove('show');
+      }
+    });
+  </script>
+  
 </body>
 </html>
