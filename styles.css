@@ -262,7 +262,7 @@ nav ul li a:hover {
   padding: 2rem 1.5rem 3rem 1.5rem; /* extra bottom padding for space below icons */
   background-color: #fff;
   border-top: 1px solid #ddd;
-  gap: 1.5rem;                  /* consistent space between copyright, credit, icons */
+  gap: 2rem;                  /* consistent space between copyright, credit, icons */
 }
 
 /* Copyright and Credit text */
@@ -277,7 +277,6 @@ nav ul li a:hover {
 /* Credit smaller */
 .footer .credit {
   font-size: 0.75rem;
-  font-style: italic;
   color: #333;
 }
 
