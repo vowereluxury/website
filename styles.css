@@ -239,9 +239,10 @@ nav ul li a:hover {
 .allure-hero h1 { color: #800000; }
 
 .board-content h2 {
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
   margin-top: 10px;
 }
 
