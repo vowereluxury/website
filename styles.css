@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Fonts */
 body {
   margin: 0;
@@ -245,6 +249,84 @@ nav ul li a:hover {
 .empress-hero h1 { color: #FFD700; }
 .baberry-hero h1 { color: #FF69B4; }
 .allure-hero h1 { color: #800000; }
+
+/* SCROLL UP ARROW */
+.scroll-up {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: #f0f0f0; /* light grey */
+  color: #000;              /* black arrow */
+
+  border-radius: 50%;
+  font-size: 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  z-index: 2000;
+}
+
+.scroll-up.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Default hover fallback */
+.scroll-up:hover {
+  background-color: #ccc;
+}
+
+/* Collection-specific hover colors */
+body.regal .scroll-up:hover {
+  background-color: #8B4513; /* Regal */
+  color: #fff;
+}
+
+body.ardor .scroll-up:hover {
+  background-color: #B22222; /* Ardor */
+  color: #fff;
+}
+
+body.pearl .scroll-up:hover {
+  background-color: #800080; /* Pearl */
+  color: #fff;
+}
+
+body.empress .scroll-up:hover {
+  background-color: #FFD700; /* Empress */
+  color: #000;
+}
+
+body.baberry .scroll-up:hover {
+  background-color: #FF69B4; /* Baberry */
+  color: #000;
+}
+
+body.allure .scroll-up:hover {
+  background-color: #800000; /* Allure */
+  color: #fff;
+}
 
 
 /* Footer */
