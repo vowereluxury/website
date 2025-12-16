@@ -2,6 +2,31 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
 /* Fonts */
 body {
   margin: 0;
@@ -409,21 +434,6 @@ body.allure .scroll-up:hover {
 
   .fashion-grid {
     grid-template-columns: 1fr;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    gap: 10px;
-  }
-
-  .footer-left {
-    justify-content: center;
-  }
-
-  .footer-right {
-    text-align: center;
   }
 }
 
