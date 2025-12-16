@@ -225,26 +225,28 @@ nav ul li a:hover {
   margin: 40px auto;
 }
 
-.board-content h2 {
+.board-content h1 {
   font-size: 32px;
   margin-bottom: 10px;
   font-family: 'Playfair Display', serif;
 }
 
 /* Fashion line colors for h1 */
-.ardor-hero h2 { color: #B22222; }
-.regal-hero h2 { color: #8B4513; }
-.pearl-hero h2 { color: #800080; }
-.empress-hero h2 { color: #FFD700; }
-.baberry-hero h2 { color: #FF69B4; }
-.allure-hero h2 { color: #800000; }
+.ardor-hero h1 { color: #B22222; }
+.regal-hero h1 { color: #8B4513; }
+.pearl-hero h1 { color: #800080; }
+.empress-hero h1 { color: #FFD700; }
+.baberry-hero h1 { color: #FF69B4; }
+.allure-hero h1 { color: #800000; }
 
 .board-content p {
   font-family: 'Playfair Display', serif;
+  max-width: 700px;
   font-size: 20px;
   font-style: normal;
   color: #333;
   margin-top: 10px;
+  line-height: 1.6;
 }
 
 /* Footer */
