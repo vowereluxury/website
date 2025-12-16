@@ -255,7 +255,7 @@ nav ul li a:hover {
 /* Footer */
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 1.5rem 2rem;
