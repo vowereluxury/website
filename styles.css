@@ -262,7 +262,7 @@ nav ul li a:hover {
   padding: 2rem 1.5rem;       /* vertical space top & bottom */
   background-color: #fff;
   border-top: 1px solid #ddd;
-  gap: 0.5rem;                 /* space between copyright, credit, icons */
+  gap: 1rem;                  /* consistent space between copyright, credit, icons */
 }
 
 /* Copyright and Credit text */
@@ -274,14 +274,19 @@ nav ul li a:hover {
   padding: 0;         /* remove any padding */
 }
 
+/* Credit smaller */
+.footer .credit {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #999;
+}
 
 /* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 1rem;                  /* space between icons */
-  margin-top: 1rem;            /* extra space from text */
-  margin-bottom: 1.5rem;       /* space from bottom of screen */
+  gap: 1rem;              /* space between icons */
+  /* remove margin-top and margin-bottom, flex gap handles spacing */
 }
 
 .social-icons a {
