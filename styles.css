@@ -259,10 +259,10 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;         /* center text and icons */
   text-align: center;
-  padding: 2rem 1.5rem;       /* vertical space top & bottom */
+  padding: 2rem 1.5rem 3rem 1.5rem; /* extra bottom padding for space below icons */
   background-color: #fff;
   border-top: 1px solid #ddd;
-  gap: 1rem;                  /* consistent space between copyright, credit, icons */
+  gap: 1.5rem;                  /* consistent space between copyright, credit, icons */
 }
 
 /* Copyright and Credit text */
@@ -278,7 +278,7 @@ nav ul li a:hover {
 .footer .credit {
   font-size: 0.75rem;
   font-style: italic;
-  color: #999;
+  color: #333;
 }
 
 /* Social icons */
