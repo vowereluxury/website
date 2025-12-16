@@ -317,18 +317,16 @@ footer {
 }
 
 /* Scroll-up arrow (hidden until scroll) */
+/* Scroll-up arrow (hidden until scroll) */
 .scroll-up {
   position: fixed;
-  right: 1.5rem;
-  left: auto;
   bottom: 1rem;
+  right: 1rem;
   background-color: #000;
   color: #fff;
   padding: 0.6rem;
   border-radius: 50%;
-  width: 54px;
-  height: 54px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
@@ -341,6 +339,7 @@ footer {
   opacity: 1;
   visibility: visible;
 }
+
 
 /* Default hover fallback */
 .scroll-up:hover {
