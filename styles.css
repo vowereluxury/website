@@ -259,10 +259,10 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;         
   text-align: center;
-  padding: 2rem 1.5rem;       /* top/bottom padding, bottom space handled separately */
+  padding: 2rem 1.5rem 3rem 1.5rem;       
   background-color: #fff;
   border-top: 1px solid #ddd;
-  gap: 2rem;                  /* space between copyright, credit, social icons */
+  gap: 2rem;                  
 }
 
 /* Copyright and Credit text */
@@ -270,8 +270,8 @@ nav ul li a:hover {
   text-align: center;
   font-size: 0.95rem;
   color: #333;
-  margin: 0;          /* remove default top/bottom margin */
-  padding: 0;         /* remove any padding */
+  margin: 1rem;          
+  padding: 0;        
 }
 
 /* Credit smaller */
@@ -285,7 +285,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 1rem;                  /* space between icons */
-  margin-bottom: 3rem;        /* extra space from bottom of screen */
+  /* margin-bottom: rem;        /* extra space from bottom of screen */ */
 }
 
 .social-icons a {
