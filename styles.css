@@ -147,7 +147,6 @@ nav ul li a:hover {
 .about h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif;
 }
 
 .about p {
@@ -162,7 +161,6 @@ nav ul li a:hover {
 #fashion-lines {
   padding: 50px 20px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
 }
 
 #fashion-lines h2 {
@@ -224,17 +222,14 @@ nav ul li a:hover {
 .board-content {
   text-align: center;
   margin: 40px auto;
-  font-family: 'Playfair Display', serif;
 }
 
 .board-content h1 {
   font-size: 32px;
   margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
 }
 
 .board-content p {
-  font-family: 'Playfair Display', serif;
   max-width: 700px;
   margin: 0 auto;
   text-align: center; 
@@ -261,7 +256,6 @@ footer {
   align-items: center;
   padding: 20px 50px;
   border-top: 1px solid #ddd;
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
 }
 
