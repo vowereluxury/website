@@ -32,6 +32,10 @@ header {
 }
 
 /* Nav */
+nav a.active {
+  border-bottom: 2px solid #000;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -63,10 +67,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #aaa;
-}
-
-.nav a.active {
-  border-bottom: 2px solid #000;
 }
 
 /* Dropdown Menu */
