@@ -127,6 +127,19 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
 .video-container {
   display: flex;
   justify-content: center;
@@ -135,11 +148,19 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-.video-container video {
+/* .video-container video {
   max-width: 100%;
   height: auto;
   display: block;
+} */
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures video covers the container */
+  display: block;
 }
+
 
 /* About Us Section */
 .about {
