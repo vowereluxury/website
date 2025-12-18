@@ -508,7 +508,8 @@ body.allure .scroll-up:hover {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
   color: white;
   border: none;
   padding: 15px 18px;
