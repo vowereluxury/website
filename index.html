@@ -58,6 +58,12 @@
     gtag('config', 'G-EZJ6H2BLB9');
   </script>
 
+  <!-- Preload Video -->
+  <link rel="preload" as="video" href="./assets/vowerevideo.mp4" type="video/mp4" crossorigin>
+
+  <!-- Preload styles.css -->
+  <link rel="stylesheet" href="styles.css">
+
 </head>
   
 <body id="top">
@@ -66,7 +72,13 @@
   <header>
     <div class="logo">
       <a href="/">
-        <img src="./assets/vowerelogo.png" alt="Vowéré Logo">
+        <img 
+          src="./assets/vowerelogo.png" 
+          alt="Vowéré Logo"
+          width="120"
+          height="auto"
+          decoding="async"
+          >
       </a>
     </div>
     <nav>
@@ -98,7 +110,7 @@
   <section class="hero">
     <h1 class="sr-only">Vowéré | Luxury Fashion & Loungewear in Kenya</h1>
     <div class="video-container">
-      <video title="Vowéré Luxury Fashion Video" autoplay muted loop playsinline>
+      <video title="Vowéré Luxury Fashion Video" autoplay muted loop playsinline preload="metadata">
         <source src="./assets/vowerevideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
