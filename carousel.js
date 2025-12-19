@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-     MODAL LOGIC (UNIVERSAL WITH PRELOADING)
+     MODAL LOGIC (PRELOADED)
   ========================== */
   const modal = document.createElement('div');
   modal.classList.add('look-modal');
@@ -56,52 +56,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let modalImages = [];
   let currentIndex = 0;
-  const preloadedImages = []; // store Image objects
+
+  // Map to store preloaded images per look
+  const preloadedMap = {};
+
+  // Preload all look images on page load
+  const lookCards = document.querySelectorAll('.look-card[data-collection][data-look][data-versions]');
+  lookCards.forEach(card => {
+    const collection = card.dataset.collection;
+    const lookNum = card.dataset.look;
+    const versions = parseInt(card.dataset.versions, 10);
+
+    if (!versions || versions <= 0) return;
+
+    const key = `${collection}-${lookNum}`;
+    preloadedMap[key] = [];
+
+    for (let i = 1; i <= versions; i++) {
+      const path = `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`;
+      const img = new Image();
+      img.src = path; // browser starts downloading immediately
+      preloadedMap[key].push(img);
+    }
+  });
 
   function updateModalImage() {
-    modalImg.src = modalImages[currentIndex];
-    // Preload next and previous images for instant arrow navigation
-    preloadAdjacentImages(currentIndex);
+    modalImg.src = modalImages[currentIndex].src; // get preloaded image src
   }
-
-  function preloadAdjacentImages(index) {
-    if (modalImages.length < 2) return;
-
-    const nextIndex = (index + 1) % modalImages.length;
-    const prevIndex = (index - 1 + modalImages.length) % modalImages.length;
-
-    [nextIndex, prevIndex].forEach(i => {
-      if (!preloadedImages[i]) {
-        const img = new Image();
-        img.src = modalImages[i];
-        preloadedImages[i] = img;
-      }
-    });
-  }
-
-  const lookCards = document.querySelectorAll('.look-card[data-collection][data-look][data-versions]');
 
   lookCards.forEach(card => {
     card.addEventListener('click', () => {
       const collection = card.dataset.collection;
       const lookNum = card.dataset.look;
-      const versions = parseInt(card.dataset.versions, 10);
+      const key = `${collection}-${lookNum}`;
 
-      if (!versions || versions <= 0) return;
+      if (!preloadedMap[key]) return;
 
-      // Build the modal images array & preload all images
-      modalImages = [];
-      preloadedImages.length = 0; // reset previous preloaded images
-
-      for (let i = 1; i <= versions; i++) {
-        const path = `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`;
-        modalImages.push(path);
-
-        const img = new Image();
-        img.src = path;
-        preloadedImages[i - 1] = img;
-      }
-
+      modalImages = preloadedMap[key]; // use preloaded images
       currentIndex = 0;
       updateModalImage();
       modal.classList.add('active');
@@ -133,6 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 
 
@@ -175,140 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //   });
 
 //   /* =========================
-//      MODAL LOGIC (UNIVERSAL)
+//      MODAL LOGIC (UNIVERSAL WITH PRELOADING)
 //   ========================== */
-//   // const modal = document.querySelector(".look-modal");
-//   // const modalImg = modal.querySelector("img");
-//   // const closeBtn = modal.querySelector(".close-modal");
-//   // const leftArrow = modal.querySelector(".modal-arrow.left");
-//   // const rightArrow = modal.querySelector(".modal-arrow.right");
-
-//   // const lookCards = document.querySelectorAll(
-//   //   ".look-card[data-look][data-versions][data-collection]"
-//   // );
-
-//   // let modalImages = [];
-//   // let currentIndex = 0;
-
-//   // function updateModalImage() {
-//   //   modalImg.src = modalImages[currentIndex];
-//   // }
-
-//   // lookCards.forEach(card => {
-//   //   card.addEventListener("click", () => {
-//   //     const collection = card.dataset.collection;
-//   //     const lookNum = card.dataset.look;
-//   //     const versions = parseInt(card.dataset.versions, 10);
-
-//   //     // ⛔ Skip placeholders / invalid looks
-//   //     if (!versions || versions <= 0) return;
-
-//   //     modalImages = [];
-
-//   //     for (let i = 1; i <= versions; i++) {
-//   //       modalImages.push(
-//   //         `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`
-//   //       );
-//   //     }
-
-//   //     currentIndex = 0;
-//   //     updateModalImage();
-//   //     modal.classList.add("active");
-//   //   });
-//   // });
-
-//   // rightArrow.addEventListener("click", () => {
-//   //   if (!modalImages.length) return;
-//   //   currentIndex = (currentIndex + 1) % modalImages.length;
-//   //   updateModalImage();
-//   // });
-
-//   // leftArrow.addEventListener("click", () => {
-//   //   if (!modalImages.length) return;
-//   //   currentIndex =
-//   //     (currentIndex - 1 + modalImages.length) % modalImages.length;
-//   //   updateModalImage();
-//   // });
-
-//   // closeBtn.addEventListener("click", () => {
-//   //   modal.classList.remove("active");
-//   //   modalImg.src = "";
-//   // });
-
-//   // modal.addEventListener("click", e => {
-//   //   if (e.target === modal) {
-//   //     modal.classList.remove("active");
-//   //     modalImg.src = "";
-//   //   }
-//   // });
-
-// //   const modal = document.createElement('div');
-// //     modal.classList.add('look-modal');
-// //     modal.innerHTML = `
-// //       <span class="close-modal">&times;</span>
-// //       <span class="modal-arrow left">‹</span>
-// //       <img src="" alt="Look version">
-// //       <span class="modal-arrow right">›</span>
-// //     `;
-// //     document.body.appendChild(modal);
-  
-// //     const modalImg = modal.querySelector('img');
-// //     const closeBtn = modal.querySelector('.close-modal');
-// //     const leftArrow = modal.querySelector('.modal-arrow.left');
-// //     const rightArrow = modal.querySelector('.modal-arrow.right');
-  
-// //     let modalImages = [];
-// //     let currentIndex = 0;
-  
-// //     function updateModalImage() {
-// //       modalImg.src = modalImages[currentIndex];
-// //     }
-  
-// //     const lookCards = document.querySelectorAll('.look-card[data-collection][data-look][data-versions]');
-// //     lookCards.forEach(card => {
-// //       card.addEventListener('click', () => {
-// //         const collection = card.dataset.collection;
-// //         const lookNum = card.dataset.look;
-// //         const versions = parseInt(card.dataset.versions, 10);
-  
-// //         modalImages = [];
-// //         for (let i = 1; i <= versions; i++) {
-// //           modalImages.push(`./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`);
-// //         }
-  
-// //         currentIndex = 0;
-// //         updateModalImage();
-// //         modal.classList.add('active');
-// //       });
-// //     });
-  
-// //     rightArrow.addEventListener('click', () => {
-// //       if (!modalImages.length) return;
-// //       currentIndex = (currentIndex + 1) % modalImages.length;
-// //       updateModalImage();
-// //     });
-  
-// //     leftArrow.addEventListener('click', () => {
-// //       if (!modalImages.length) return;
-// //       currentIndex = (currentIndex - 1 + modalImages.length) % modalImages.length;
-// //       updateModalImage();
-// //     });
-  
-// //     closeBtn.addEventListener('click', () => {
-// //       modal.classList.remove('active');
-// //       modalImg.src = '';
-// //     });
-  
-// //     modal.addEventListener('click', e => {
-// //       if (e.target === modal) {
-// //         modal.classList.remove('active');
-// //         modalImg.src = '';
-// //       }
-// //     });
-
-// // });
-
-//   // Create the modal dynamically
 //   const modal = document.createElement('div');
 //   modal.classList.add('look-modal');
 //   modal.innerHTML = `
@@ -359,14 +219,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //       if (!versions || versions <= 0) return;
 
-//       // Build the modal images array
+//       // Build the modal images array & preload all images
 //       modalImages = [];
 //       preloadedImages.length = 0; // reset previous preloaded images
+
 //       for (let i = 1; i <= versions; i++) {
 //         const path = `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`;
 //         modalImages.push(path);
 
-//         // Preload each image immediately
 //         const img = new Image();
 //         img.src = path;
 //         preloadedImages[i - 1] = img;
