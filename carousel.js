@@ -37,49 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-     MODAL LOGIC (UNIVERSAL)
+     MODAL LOGIC (INSTANT THUMBNAIL + BACKGROUND FULL IMG)
   ========================== */
   const modal = document.createElement('div');
   modal.classList.add('look-modal');
   modal.innerHTML = `
     <span class="close-modal">&times;</span>
     <span class="modal-arrow left">‹</span>
-    <img src="" alt="Look version">
+    <img src="" alt="Look version" class="modal-image">
     <span class="modal-arrow right">›</span>
   `;
   document.body.appendChild(modal);
 
-  const modalImg = modal.querySelector('img');
+  const modalImg = modal.querySelector('.modal-image');
   const closeBtn = modal.querySelector('.close-modal');
   const leftArrow = modal.querySelector('.modal-arrow.left');
   const rightArrow = modal.querySelector('.modal-arrow.right');
 
   let modalImages = [];
   let currentIndex = 0;
-  const preloadedImages = [];
 
-  function updateModalImage() {
-    if (!modalImages.length) return;
-    modalImg.src = modalImages[currentIndex];
-    preloadAdjacentImages(currentIndex);
-  }
+  function showImage(index) {
+    // Show thumbnail immediately (same JPG resized with CSS)
+    modalImg.src = modalImages[index].thumbnail;
 
-  function preloadAdjacentImages(index) {
-    if (modalImages.length < 2) return;
-
-    const nextIndex = (index + 1) % modalImages.length;
-    const prevIndex = (index - 1 + modalImages.length) % modalImages.length;
-
-    [nextIndex, prevIndex].forEach(i => {
-      if (!preloadedImages[i]) {
-        const img = new Image();
-        img.src = modalImages[i];
-        preloadedImages[i] = img;
-      }
-    });
+    // Load full-res in background
+    const fullImg = new Image();
+    fullImg.src = modalImages[index].full;
+    fullImg.onload = () => {
+      // Swap to full-res once loaded
+      modalImg.src = fullImg.src;
+    };
   }
 
   const lookCards = document.querySelectorAll('.look-card[data-collection][data-look][data-versions]');
+
   lookCards.forEach(card => {
     card.addEventListener('click', () => {
       const collection = card.dataset.collection;
@@ -88,47 +80,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!versions || versions <= 0) return;
 
-      // Build modalImages array
       modalImages = [];
-      preloadedImages.length = 0; // reset previous preloaded images
 
       for (let i = 1; i <= versions; i++) {
-        const path = `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`;
-        modalImages.push(path);
+        // Use CSS-resized thumbnail for instant display
+        modalImages.push({
+          thumbnail: `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`,
+          full: `./assets/${collection}/look${lookNum}/look${lookNum}-${i}.jpg`
+        });
       }
 
-      // Load first image immediately
       currentIndex = 0;
-      updateModalImage();
+      showImage(currentIndex);
       modal.classList.add('active');
-
-      // Preload remaining images in background after page paint
-      const preloadOtherVersions = () => {
-        for (let i = 1; i < modalImages.length; i++) {
-          const img = new Image();
-          img.src = modalImages[i];
-          preloadedImages[i] = img;
-        }
-      };
-
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(preloadOtherVersions);
-      } else {
-        setTimeout(preloadOtherVersions, 500);
-      }
     });
   });
 
   rightArrow.addEventListener('click', () => {
     if (!modalImages.length) return;
     currentIndex = (currentIndex + 1) % modalImages.length;
-    updateModalImage();
+    showImage(currentIndex);
   });
 
   leftArrow.addEventListener('click', () => {
     if (!modalImages.length) return;
     currentIndex = (currentIndex - 1 + modalImages.length) % modalImages.length;
-    updateModalImage();
+    showImage(currentIndex);
   });
 
   closeBtn.addEventListener('click', () => {
@@ -144,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 
 // document.addEventListener("DOMContentLoaded", () => {
