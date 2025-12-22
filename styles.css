@@ -706,19 +706,28 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
 }
 
 /* ============================= */
-/* MOBILE SPACING ADJUSTMENTS */
+/* MOBILE SPACING & HERO ADJUSTMENTS */
 /* ============================= */
 
-/* Adjust spacing on mobile */
 @media (max-width: 768px) {
-  .hero {
-    height: 80vh;        /* let hero shrink to video height */
-    margin-bottom: 20px; /* spacing between hero and about */
+  /* Combined Hero & Video logic */
+  .hero, .video-container {
+    height: auto !important; 
+    min-height: 300px;
+    margin-bottom: 20px; 
+    background-color: #000; /* Keeps the luxury black background */
   }
 
+  .video-container video {
+    height: auto !important;
+    width: 100%;
+    object-fit: contain; /* Shows the full fashion frame without stretching */
+  }
+
+  /* About Section spacing */
   .about {
-    padding-top: 20px;   /* tighten top of about */
-    padding-bottom: 40px; /* match About → Fashion spacing */
+    padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 
