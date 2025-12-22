@@ -418,6 +418,54 @@ body.empress .view-more-hint { color: #C5A000; } /* Darker Gold for readability 
 body.baberry .view-more-hint { color: #FF69B4; } /* Pink */
 body.allure .view-more-hint  { color: #800000; } /* Maroon */
 
+/* --- Order Now Button Styling --- */
+.product-cta {
+  display: block;
+  width: 85%;            /* Slightly wider for a better tap target on mobile */
+  margin: 15px auto 10px auto;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0;      /* Sharp corners look more "couture" than rounded ones */
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 10;           /* Ensures it stays above the card's click layer */
+  text-align: center;
+}
+
+/* Default Colors (Black background, White text) */
+.product-cta {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+/* Collection Specific Button Colors */
+body.regal .product-cta   { background-color: #8B4513; border-color: #8B4513; }
+body.ardor .product-cta   { background-color: #B22222; border-color: #B22222; }
+body.pearl .product-cta   { background-color: #800080; border-color: #800080; }
+body.empress .product-cta { background-color: #C5A000; border-color: #C5A000; }
+body.baberry .product-cta { background-color: #FF69B4; border-color: #FF69B4; }
+body.allure .product-cta  { background-color: #800000; border-color: #800000; }
+
+/* Elegant Hover State: Transparent Background */
+.product-cta:hover {
+  background-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* On hover, text changes to match the border/theme */
+body.regal .product-cta:hover   { color: #8B4513; }
+body.ardor .product-cta:hover   { color: #B22222; }
+body.pearl .product-cta:hover   { color: #800080; }
+body.empress .product-cta:hover { color: #C5A000; }
+body.baberry .product-cta:hover { color: #FF69B4; }
+body.allure .product-cta:hover  { color: #800000; }
 
 /* ============================= */
 /* RESPONSIVE STYLES */
@@ -667,5 +715,16 @@ body.allure .view-more-hint  { color: #800000; } /* Maroon */
 @media (max-width: 768px) {
   .view-more-hint {
     font-size: 0.8rem;
+  }
+}
+
+/* ============================= */
+/* MOBILE ORDER NOW ADJUSTMENTS */
+/* ============================= */
+@media (max-width: 768px) {
+  .product-cta {
+    width: 90%;
+    padding: 14px 10px; /* Slightly taller for thumbs */
+    font-size: 0.9rem;
   }
 }
