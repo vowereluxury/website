@@ -481,331 +481,27 @@ body.empress .product-cta:hover { color: #C5A000 !important; border-color: #C5A0
 body.baberry .product-cta:hover { color: #FF69B4 !important; border-color: #FF69B4; }
 body.allure .product-cta:hover  { color: #800000 !important; border-color: #800000; }
 
-/* ============================= */
-/* RESPONSIVE STYLES */
-/* ============================= */
-/* 
-@media (max-width: 1024px) {
-  .fashion-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    padding: 10px 15px;
-    margin-bottom: 0 !important; 
-  } */
-
-  /* nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .whatsapp-cta a {
-    font-size: 14px;
-    padding: 6px 12px;
-  } */
-
- /* FIXED HERO LOGIC: Removed the 60vh conflict */
-  /* .hero {
-    height: auto !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    display: block;
-    overflow: visible;
-  } */
-
-  /* .video-container {
-    height: auto !important;
-    min-height: 200px;
-    margin-top: 0 !important;
-    margin-bottom: 20px;
-    padding: 0 !important;
-    background-color: #fff;
-    animation: none;
-    display: block; 
-  } */
-/* 
-  .video-container video {
-    height: auto !important;
-    width: 100%;
-    display: block;      
-    vertical-align: top; 
-    object-fit: contain; 
-    background-color: #fff;
-  } */
-
-  /* .about h2,
-  #fashion-lines h2 {
-    font-size: 24px;
-  }
-
-  .fashion-grid {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    gap: 10px;
-  }
-
-  .footer-left {
-    justify-content: center;
-  }
-
-  .footer-right {
-    text-align: center;
-  }
-}
-
-/* ============================= */
-/* CAROUSEL STYLES (shared) */
-/* ============================= */
-
-/* .carousel-container {
-  position: relative;
-  max-width: 1200px;
-  margin: 50px auto;
-  overflow: hidden;
-  padding: 0 20px;
-} */
-
-/* Scroll-snap + swipe support */
-/* .carousel-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto; 
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; 
-  scroll-behavior: smooth; 
-  transition: transform 0.5s ease;
-} */
-
-/* .carousel-item {
-  flex: 1 0 calc(33.333% - 20px); 
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #f5f5f5;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  scroll-snap-align: start; 
-} */ 
-
-/* .carousel-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  border-bottom: 1px solid #ddd;
-}
-
-.carousel-item p {
-  padding: 5px 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  color: #333;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Arrows */
-/* .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
-  color: white;
-  border: none;
-  padding: 15px 18px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-  font-size: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.carousel-arrow.left { left: 10px; }
-.carousel-arrow.right { right: 10px; }
-
-.carousel-arrow:hover {
-  background-color: rgba(0,0,0,0.9);
-  transform: scale(1.15);
-}
-
-.carousel-arrow:disabled {
-  opacity: 0.3;
-  cursor: default;
-} */
-
-/* --- Modal for look versions --- */
-/* .look-modal {
-  display: none; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.85);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-} */ 
-
-/* .look-modal.active {
-  display: flex;
-}
-
-.look-modal img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.look-modal .close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-.look-modal .modal-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10000;
-  user-select: none;
-}
-
-.look-modal .modal-arrow.left {
-  left: 20px;
-}
-
-.look-modal .modal-arrow.right {
-  right: 20px;
-} */
-
-
-/* ============================= */
-/* RESPONSIVE BREAKPOINTS for Carousel */
-/* ============================= */
-
-/* @media (max-width: 1024px) {
-  .carousel-item {
-    flex: 1 0 calc(50% - 20px); 
-  }
-} */
-
-/* @media (max-width: 768px) {
-  .carousel-item {
-    flex: 1 0 100%; 
-  } */
-
-  /* .carousel-arrow {
-    font-size: 20px;
-    padding: 12px 14px;
-  }
-} */
-
-/* ============================= */
-/* MOBILE SPACING & HERO ADJUSTMENTS */
-/* ============================= */
-
-/* @media (max-width: 768px) { */
-  /* Combined Hero & Video logic */
-  /* .hero, .video-container {
-    height: auto !important; 
-    min-height: 300px;
-    margin-top: 0 !important;    
-    margin-bottom: 20px; 
-    padding-top: 0 !important;   
-    background-color: #fff; 
-    animation: none;        
-  } */
-
-  /* .video-container video {
-    height: auto !important;
-    width: 100%;
-    vertical-align: top;       
-    object-fit: contain; 
-    background-color: #fff; 
-  } */
-
-  /* About Section spacing */
-  /* .about {
-    padding-top: 10px;          
-    padding-bottom: 40px;
-  }
-} */
-
-/* ============================= */
-/* MOBILE VIEW HINT ADJUSTMENTS */
-/* ============================= */
-
-/* @media (max-width: 768px) {
-  .view-more-hint {
-    font-size: 0.8rem;
-  }
-} */
-
-/* ============================= */
-/* MOBILE ORDER NOW ADJUSTMENTS */
-/* ============================= */
-/* @media (max-width: 768px) {
-  .product-cta {
-    width: 90%;
-    padding: 14px 10px; 
-    font-size: 0.9rem;
-  }
-} */
-
 /* ================================================================ */
-/* 1. RESPONSIVE STYLES (Tablet & Mobile)                           */
+/* 1. RESPONSIVE STYLES (Tablet & Mobile Fixes)                     */
 /* ================================================================ */
 
-/* --- TABLET VIEW (Up to 1024px) --- */
-@media (max-width: 1024px) {
+/* --- TABLET VIEW (769px to 1024px) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
   .fashion-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   /* Carousel: Show 2 per row on Tablet */
   .carousel-item {
-    flex: 1 0 calc(50% - 20px);
+    flex: 1 0 calc(50% - 20px) !important;
   }
 }
 
 /* --- MOBILE VIEW (Up to 768px) --- */
 @media (max-width: 768px) {
-  
-  /* Header & Navigation Fixes */
   header {
     flex-wrap: wrap;
     padding: 10px 15px;
-    margin-bottom: 0 !important; /* Forces Video to stick to Header */
+    margin-bottom: 0 !important;
   }
 
   nav, nav ul {
@@ -815,79 +511,37 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
     width: 100%;
   }
 
-  .whatsapp-cta a {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
   /* Video Hero Fix: Sticks flush to header */
-  .hero {
+  .hero, .video-container {
     height: auto !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
     display: block;
-    overflow: visible;
-  }
-
-  .video-container {
-    height: auto !important;
-    min-height: 200px;
-    margin-top: 0 !important;
-    margin-bottom: 20px;
-    padding: 0 !important;
-    background-color: #fff;
-    animation: none;
-    display: block; 
   }
 
   .video-container video {
     height: auto !important;
     width: 100%;
-    display: block;      
-    vertical-align: top; 
-    object-fit: contain; 
-    background-color: #fff;
-  }
-
-  /* Text & Section Spacing */
-  .about {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-
-  .about h2, #fashion-lines h2 {
-    font-size: 24px;
+    display: block;
+    object-fit: contain;
   }
 
   .fashion-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Footer Mobile Alignment */
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    gap: 10px;
-  }
-
-  /* Carousel: Show 1 per row on Mobile */
+  /* Carousel: FORCE 1 per row on Mobile */
   .carousel-item {
-    flex: 1 0 100%;
+    flex: 1 0 100% !important;
   }
 
-  /* Arrows: Smaller for mobile */
   .carousel-arrow {
     font-size: 20px;
     padding: 12px 14px;
   }
 
-  /* View More Hint: Smaller for mobile screens */
-  .view-more-hint {
-    font-size: 0.8rem;
-  }
+  .view-more-hint { font-size: 0.8rem; }
 
-  /* Order Now Button Mobile Adjustments */
   .product-cta {
     width: 90%;
     padding: 14px 10px;
@@ -896,7 +550,7 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
 }
 
 /* ================================================================ */
-/* 2. CAROUSEL STYLES (Shared Desktop/Mobile)                       */
+/* 2. CAROUSEL BASE & DESKTOP STYLES                                */
 /* ================================================================ */
 
 .carousel-container {
@@ -907,7 +561,6 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   padding: 0 20px;
 }
 
-/* Scroll-snap & Swipe Logic */
 .carousel-track {
   display: flex;
   gap: 20px;
@@ -915,12 +568,17 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  transition: transform 0.5s ease;
 }
 
-/* Carousel: Default 3 per row (Laptop/Desktop) */
+/* DESKTOP ONLY: Show 3 per row (Wider than 1024px) */
+@media (min-width: 1025px) {
+  .carousel-item {
+    flex: 1 0 calc(33.333% - 20px);
+  }
+}
+
+/* Shared Carousel Item Styling */
 .carousel-item {
-  flex: 1 0 calc(33.333% - 20px);
   border-radius: 10px;
   overflow: hidden;
   background-color: #f5f5f5;
@@ -935,27 +593,19 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   height: auto;
   object-fit: cover;
   display: block;
-  border-bottom: 1px solid #ddd;
 }
 
 .carousel-item p {
-  padding: 5px 0;
+  padding: 10px 0;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1rem;
-  color: #333;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Navigation Arrows */
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
   color: white;
   border: none;
   padding: 15px 18px;
@@ -963,22 +613,9 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   border-radius: 50%;
   z-index: 10;
   font-size: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s, transform 0.2s;
 }
-
 .carousel-arrow.left { left: 10px; }
 .carousel-arrow.right { right: 10px; }
-
-.carousel-arrow:hover {
-  background-color: rgba(0,0,0,0.9);
-  transform: scale(1.15);
-}
-
-.carousel-arrow:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
 
 /* ================================================================ */
 /* 3. MODAL / LOOKBOOK POPUP STYLES                                 */
@@ -987,48 +624,14 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
 .look-modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.85);
   z-index: 9999;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; align-items: center;
 }
-
-.look-modal.active {
-  display: flex;
-}
-
-.look-modal img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: contain;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.look-modal .close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-.look-modal .modal-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 10000;
-  user-select: none;
-}
-
+.look-modal.active { display: flex; }
+.look-modal img { max-width: 80%; max-height: 80%; object-fit: contain; border-radius: 10px; }
+.look-modal .close-modal { position: absolute; top: 20px; right: 30px; font-size: 2rem; color: #fff; cursor: pointer; }
+.look-modal .modal-arrow { position: absolute; top: 50%; transform: translateY(-50%); font-size: 3rem; color: #fff; cursor: pointer; user-select: none; }
 .look-modal .modal-arrow.left { left: 20px; }
 .look-modal .modal-arrow.right { right: 20px; }
