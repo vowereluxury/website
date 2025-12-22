@@ -150,7 +150,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100vh;      /* Force it to fill the screen */
   margin: 0 auto;
-  background-color: #000; /* ESSENTIAL: Prevents white flash before poster loads */
+  background-color: #fff; /* ESSENTIAL: Prevents white flash before poster loads */
   overflow: hidden;
 }
 
@@ -167,7 +167,7 @@ nav ul li a:hover {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000;
+  background-color: #fff;
 }
 
 /* Animation for the Hero Section */
@@ -715,13 +715,15 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
     height: auto !important; 
     min-height: 300px;
     margin-bottom: 20px; 
-    background-color: #000; /* Keeps the luxury black background */
+    background-color: #fff; /* Keeps the luxury white background */
+    animation: none;        /* Removed animation to prevent "white flash" issues */
   }
 
   .video-container video {
     height: auto !important;
     width: 100%;
     object-fit: contain; /* Shows the full fashion frame without stretching */
+    background-color: #fff; /* Ensures the video element itself sits on white */
   }
 
   /* About Section spacing */
