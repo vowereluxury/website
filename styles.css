@@ -271,7 +271,7 @@ nav ul li a:hover {
 .ardor-hero h1 { color: #B22222; }
 .regal-hero h1 { color: #8B4513; }
 .pearl-hero h1 { color: #800080; }
-.empress-hero h1 { color: #FFD700; }
+.empress-hero h1 { color: #C5A000; }
 .baberry-hero h1 { color: #FF69B4; }
 .allure-hero h1 { color: #800000; }
 
@@ -371,7 +371,7 @@ body.pearl .scroll-up:hover {
 }
 
 body.empress .scroll-up:hover {
-  background-color: #FFD700; /* Empress */
+  background-color: #C5A000; /* Empress */
   color: #000;
 }
 
@@ -384,6 +384,39 @@ body.allure .scroll-up:hover {
   background-color: #800000; /* Allure */
   color: #fff;
 }
+
+/* --- Global Hint Styling --- */
+.view-more-hint {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 auto 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.view-more-hint i {
+  font-size: 0.8rem;
+  animation: hintArrowMove 1.5s infinite ease-in-out;
+}
+
+@keyframes hintArrowMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* --- Collection Specific Colors --- */
+body.regal .view-more-hint   { color: #8B4513; } /* Brown */
+body.ardor .view-more-hint   { color: #B22222; } /* Red */
+body.pearl .view-more-hint   { color: #800080; } /* Purple */
+body.empress .view-more-hint { color: #C5A000; } /* Darker Gold for readability */
+body.baberry .view-more-hint { color: #FF69B4; } /* Pink */
+body.allure .view-more-hint  { color: #800000; } /* Maroon */
 
 
 /* ============================= */
@@ -624,5 +657,15 @@ body.allure .scroll-up:hover {
   .about {
     padding-top: 20px;   /* tighten top of about */
     padding-bottom: 40px; /* match About → Fashion spacing */
+  }
+}
+
+/* ============================= */
+/* MOBILE VIEW HINT ADJUSTMENTS */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .view-more-hint {
+    font-size: 0.8rem;
   }
 }
