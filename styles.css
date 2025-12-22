@@ -714,7 +714,9 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   .hero, .video-container {
     height: auto !important; 
     min-height: 300px;
+    margin-top: 0 !important;    /* Forces it to touch the header */
     margin-bottom: 20px; 
+    padding-top: 0 !important;   /* Removes any internal spacing */
     background-color: #fff; /* Keeps the luxury white background */
     animation: none;        /* Removed animation to prevent "white flash" issues */
   }
@@ -722,13 +724,14 @@ body.allure .product-cta:hover  { color: #800000 !important; border-color: #8000
   .video-container video {
     height: auto !important;
     width: 100%;
+    vertical-align: top;        /* Removes the tiny 3px gap often found under videos */
     object-fit: contain; /* Shows the full fashion frame without stretching */
     background-color: #fff; /* Ensures the video element itself sits on white */
   }
 
   /* About Section spacing */
   .about {
-    padding-top: 20px;
+    padding-top: 10px;          /* Reduced to keep the flow tight */
     padding-bottom: 40px;
   }
 }
