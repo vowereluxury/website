@@ -454,18 +454,18 @@ body.allure .product-cta  { background-color: #800000; border-color: #800000; }
 
 /* Elegant Hover State: Transparent Background */
 .product-cta:hover {
-  background-color: transparent;
+  background-color: transparent !important; /* Makes the button hallow */
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* On hover, text changes to match the border/theme */
-body.regal .product-cta:hover   { color: #8B4513; }
-body.ardor .product-cta:hover   { color: #B22222; }
-body.pearl .product-cta:hover   { color: #800080; }
-body.empress .product-cta:hover { color: #C5A000; }
-body.baberry .product-cta:hover { color: #FF69B4; }
-body.allure .product-cta:hover  { color: #800000; }
+/* This ensures the text turns into the THEME color when the background vanishes */
+body.regal .product-cta:hover   { color: #8B4513 !important; border-color: #8B4513; }
+body.ardor .product-cta:hover   { color: #B22222 !important; border-color: #B22222; }
+body.pearl .product-cta:hover   { color: #800080 !important; border-color: #800080; }
+body.empress .product-cta:hover { color: #C5A000 !important; border-color: #C5A000; }
+body.baberry .product-cta:hover { color: #FF69B4 !important; border-color: #FF69B4; }
+body.allure .product-cta:hover  { color: #800000 !important; border-color: #800000; }
 
 /* ============================= */
 /* RESPONSIVE STYLES */
